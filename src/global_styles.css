@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #6366f1;
+  --secondary-color: #4f46e5;
+}
+
+body {
+  @apply bg-gray-50;
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease-out;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.search-box {
+  @apply bg-white rounded-lg shadow-lg p-6 transform transition-all duration-300;
+}
+
+.search-box:hover {
+  @apply shadow-xl -translate-y-1;
+}
+
+.btn-primary {
+  @apply bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold 
+         transform transition-all duration-300 hover:bg-indigo-700 
+         hover:shadow-lg active:scale-95;
+}
